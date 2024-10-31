@@ -4,8 +4,8 @@ html {
 
 /* Header */
 header {
-    position: fixed;
-    width: 100%;
+    /* position: fixed;
+    width: 100%; */
     background-color: white;
     z-index: 10;
 }
@@ -19,14 +19,13 @@ header h1 {
 }
 
 .nav-placeholder{
-    position: absolute;
+    position: fixed;
     top: 35px;
     left: 35px;
 }
 
 #menu {
     position: absolute;
-
     display: none;
     justify-self: start;
 }
@@ -38,13 +37,17 @@ header h1 {
 /* Main */
 
 main {
-    padding-top: 100px;
+    padding-top: 25px;
 }
+
+/* section {
+    padding-top: 25px;
+} */
 
  /* Main Display */
 
 .container.projects {
-    padding: 0 15%;
+    padding: 0 10%;
 }
 
 .main-display {
@@ -55,7 +58,7 @@ main {
 
 .main-display-item {
     /* aspect-ratio: 1; */
-    height: 800px;
+    height: 80vh;
     border: 1px solid black;
     padding: 1.5rem;
     box-sizing: border-box;
@@ -75,14 +78,34 @@ main {
 /* Projects Grid */
 
 .grid-container {
+    height: 80vh;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    white-space: nowrap;
+
+    -webkit-overflow-scrolling: touch;
     margin-top: 20px;
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(5, 1fr);
-
+    grid-template-rows: auto-fit, minmax(25vw, 1fr);
+    
+    grid-template-columns: repeat(auto-fit, minmax(25vh, 1fr));
+    transform: rotate(90deg);
+    transform: flip;
 }
 
 .grid-item {
     aspect-ratio: 1;
     border: 1px solid black;
+}
+
+/* About */
+
+.about {
+    min-height: 100px;
+    padding: 2rem;
+}
+
+.about h2 {
+    font-size: 1.5rem;
 }
