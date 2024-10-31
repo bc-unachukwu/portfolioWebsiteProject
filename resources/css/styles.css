@@ -1,3 +1,88 @@
 html {
     font-size: 16px;
 }
+
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+}
+
+header .container.flex-header {
+    padding: 0.8rem 0;
+}
+
+header h1 {
+    font-size: 4rem;
+}
+
+.nav-placeholder{
+    position: absolute;
+    top: 35px;
+    left: 35px;
+}
+
+#menu {
+    position: absolute;
+
+    display: none;
+    justify-self: start;
+}
+
+#logo {
+    justify-self: center;
+}
+
+/* Main */
+
+main {
+    padding-top: 100px;
+}
+
+ /* Main Display */
+
+.container.projects {
+    padding: 0 15%;
+}
+
+.main-display {
+    display: grid;
+    /* gap: 20px; */
+    grid-template-columns: 2fr 1fr;
+}
+
+.main-display-item {
+    /* aspect-ratio: 1; */
+    height: 800px;
+    border: 1px solid black;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+#main-img {
+    background-image: url("../projects/final-project/img/final-project-section.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+#main-content {
+    background-color: gray;
+}
+
+/* Projects Grid */
+
+.grid-container {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+
+.grid-item {
+    aspect-ratio: 1;
+    border: 1px solid black;
+}
