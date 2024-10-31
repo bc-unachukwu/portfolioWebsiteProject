@@ -77,25 +77,37 @@ main {
 
 /* Projects Grid */
 
-.grid-container {
-    height: 80vh;
-    overflow-x: scroll;
-    overflow-y: scroll;
-    white-space: nowrap;
-
-    -webkit-overflow-scrolling: touch;
+.scroll-container{
     margin-top: 20px;
-    display: grid;
+    display: flex;
+    width: 100%;
+    scroll-snap-type: x mandatory; /* Smooth scrolling */
+    -webkit-overflow-scrolling: touch;
+}
+
+.flex-container {
+    width: 100%;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow-x: auto;
+    height: 90vh;
     gap: 20px;
-    grid-template-rows: auto-fit, minmax(25vw, 1fr);
-    
-    grid-template-columns: repeat(auto-fit, minmax(25vh, 1fr));
-    transform: rotate(90deg);
-    transform: flip;
+    /* justify-content: space-between; */
 }
 
 .grid-item {
-    aspect-ratio: 1;
+    flex: 1 1 auto;
+    min-height: calc(40vh - 20px);
+    aspect-ratio: 1 / 1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    scroll-snap-align: start; /* Smooth scroll snapping */
     border: 1px solid black;
 }
 
