@@ -1,123 +1,157 @@
 html {
-    font-size: 16px;
+  font-size: 16px;
+}
+
+html section {
+  margin-bottom: 60px;
+}
+html h2.title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 /* Header */
 header {
-    /* position: fixed;
-    width: 100%; */
-    background-color: white;
-    z-index: 10;
+  /* position: fixed;
+  width: 100%; */
+  background-color: white;
+  z-index: 10;
 }
 
 header .container.flex-header {
-    padding: 0.8rem 0;
+  padding: 0.8rem 0;
 }
 
 header h1 {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 .nav-placeholder{
-    position: fixed;
-    top: 35px;
-    left: 35px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
 }
 
 #menu {
-    position: absolute;
-    display: none;
-    justify-self: start;
+  position: absolute;
+  display: none;
+  justify-self: start;
 }
 
 #logo {
-    justify-self: center;
+  justify-self: center;
 }
 
 /* Main */
 
 main {
-    padding-top: 25px;
+  padding-top: 25px;
 }
 
 /* section {
-    padding-top: 25px;
+  padding-top: 25px;
 } */
 
- /* Main Display */
+/* Main Display */
 
 .container.projects {
-    padding: 0 10%;
+  padding: 0 50px;
 }
 
 .main-display {
-    display: grid;
-    /* gap: 20px; */
-    grid-template-columns: 2fr 1fr;
+  display: grid;
+  /* gap: 20px; */
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 20px;
 }
 
 .main-display-item {
-    /* aspect-ratio: 1; */
-    height: 80vh;
-    border: 1px solid black;
-    padding: 1.5rem;
-    box-sizing: border-box;
+  /* aspect-ratio: 1; */
+  height: 80vh;
+  border: 1px solid black;
+  padding: 1.5rem;
+  box-sizing: border-box;
 }
 
 #main-img {
-    background-image: url("../projects/final-project/img/final-project-section.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
+  background-image: url("../projects/final-project/img/final-project-florentine2049.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 
 #main-content {
-    background-color: gray;
+  background-color: gray;
 }
+
 
 /* Projects Grid */
 
 .scroll-container{
-    margin-top: 20px;
-    display: flex;
-    width: 100%;
-    scroll-snap-type: x mandatory; /* Smooth scrolling */
-    -webkit-overflow-scrolling: touch;
+  display: flex;
+  width: 100%;
+  scroll-snap-type: x mandatory; /* Smooth scrolling */
+  -webkit-overflow-scrolling: touch;
 }
 
 .flex-container {
-    width: 100%;
-    align-items: flex-start;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    overflow-x: auto;
-    height: 90vh;
-    gap: 20px;
-    /* justify-content: space-between; */
+  width: 100%;
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow-x: auto;
+  height: 90vh;
+  gap: 20px;
+  /* justify-content: space-between; */
 }
 
 .grid-item {
-    flex: 1 1 auto;
-    min-height: calc(40vh - 20px);
-    aspect-ratio: 1 / 1;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-size: 1.2em;
-    scroll-snap-align: start; /* Smooth scroll snapping */
-    border: 1px solid black;
+  flex: 1 1 auto;
+  min-height: calc(40vh - 20px);
+  aspect-ratio: 1 / 1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.2em;
+  scroll-snap-align: start; /* Smooth scroll snapping */
+  border: 1px solid black;
 }
 
-/* About */
+/* About Me */
 
-.about {
-    min-height: 100px;
-    padding: 2rem;
+#about {
+  height: 45vh;
 }
 
-.about h2 {
-    font-size: 1.5rem;
+.about-flex {
+  padding: 0 25vw;
+
+  display: flex;
+}
+.about-flex p {
+  padding-left: 2rem;
+}
+
+/* Skills */
+
+#skills {
+  padding: 0 50px;
+  height: 90vh;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.skills-item {
+  padding: 1.5rem;
+  border: 1px solid black;
+  min-height: 80%;
 }
