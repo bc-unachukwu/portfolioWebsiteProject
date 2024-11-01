@@ -35,17 +35,8 @@ html h2.title {
   top: 47px;
 }
 
-/* Main */
-
-/* main {
-  padding-top: 25px;
-} */
-
 .container.projects {
-  background-color: #b81817;
-
   margin-left: 40px;
-  padding-bottom: 20px;
 }
 
 .main-display {
@@ -56,9 +47,7 @@ html h2.title {
 }
 
 .main-display-item {
-  /* aspect-ratio: 1; */
   height: 90vh;
-  /* border: 1px solid black; */
   padding: 1.5rem;
   box-sizing: border-box;
   background-color: white;
@@ -67,7 +56,6 @@ html h2.title {
 #main-img {
   background-image: url("../projects/final-project/img/final-project-florentine2049.png");
   background-repeat: no-repeat;
-  /* background-size: contain; */
   background-size: cover;
   background-position: center center;
 }
