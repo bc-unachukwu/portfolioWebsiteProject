@@ -18,7 +18,7 @@
     <!-- Header -->
     <header>
       <div class="container flex-header">
-        <div class="nav-placeholder"><h2>O</h2></div>
+        <div class="nav-placeholder"><a href="#">MENU</a></div>
         <nav id="menu">
           <ul>
             <li><a href="#projects">Projects</a></li>
@@ -69,39 +69,109 @@
       </section>
 
       <!-- About -->
-      <section id="about">
-        <h2 class="title">About Me</h2>
-        <div class="about-flex">
-          <img src="#" alt="Lev Zhitnik">
-          <p>My name is Lev Zhitnik, I am a full-stack engineer in training with a B.Arch from the Technion and an AI certificate from MIT Professional Education.
-            My background includes pioneering computational design and data-driven urban planning, including Israel's first generative urban masterplan for Sde-Dov.
-            I have consistently leveraged data analytics, computational design and automation to innovate and inform smarter city planning and system design.</p>
+      <section class="about-skills">
+        <div id="about">
+          <h2 class="title">About Me</h2>
+          <div class="about-flex">
+            <img id="my-photo" src="#" alt="Lev Zhitnik">
+            <div class="about-text">
+              <p>My name is Lev Zhitnik, I am a full-stack engineer in training with a B.Arch from the Technion and an AI certificate from MIT Professional Education.
+                My background includes pioneering computational design and data-driven urban planning, including Israel's first generative urban masterplan for Sde-Dov.
+                I have consistently leveraged data analytics, computational design and automation to innovate and inform smarter city planning and system design.
+              </p>
+              <div class="about-credentials">
+                <a href="https://architecture.technion.ac.il/" target="_blank"><img src="./resources/images/technion-logo.png" alt="Technion Faculty of Architecture and Town Planning"></a>
+                <a href="https://prolearn.mit.edu/applied-data-science-program-leveraging-ai-effective-decision-making" target="_blank"><img src="./resources/images/mit-pe.png" alt="MIT Professional Education: Applied Data Science Program: Leveraging AI for Effective Decision-Making"></a>
+                <a href="https://www.codecademy.com/learn/paths/full-stack-engineer-career-path"><img src="./resources/images/CC-logo-short.webp" alt="Codecademy Full Stack Engineer Career Path"></a>
+              </div>
+            </div>
+          </div>
+          
         </div>
-      </section>
 
-      <!-- Skills -->
-      <section id="skills">
-        <h2 class="title">Professional Skills</h2>
-        <div class="skills-grid container">
+        <!-- Skills -->
+        <div id="skills">
+          <h2 class="title">Professional Skills</h2>
+          <div class="skills-grid container">
 
-          <!-- Programming Skills -->
-          <div class="skills-item programming">
-            <h3>Full Stack & Programming</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum eum vel, neque dolorem quibusdam sapiente sit, laudantium optio impedit tempore facere aperiam, vero reprehenderit numquam officiis magnam repellat nesciunt a.</p>
+            <!-- Programming Skills -->
+            <div class="skills-item programming">
+              <h3>Full Stack & Programming</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum eum vel, neque dolorem quibusdam sapiente sit, laudantium optio impedit tempore facere aperiam, vero reprehenderit numquam officiis magnam repellat nesciunt a.</p>
+              <div class="skill-icon-flex">
+                <div class="skill-icon-item" id="skill-bash">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" />
+                </div>
+                <div class="skill-icon-item" id="skill-python">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                </div>
+                <div class="skill-icon-item" id="skill-html5">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                </div>
+                <div class="skill-icon-item" id="skill-css">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                </div>
+                <div class="skill-icon-item" id-="skill-javascript">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                </div>
+                <div class="skill-icon-item" id="skill-git">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+                </div>
+                <div class="skill-icon-item" id="skill-github">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+                </div>
+                <div class="skill-icon-item" id="skill-react">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+                </div>
+                <div class="skill-icon-item" id="skill-redux">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" />
+                </div>
+                <div class="skill-icon-item" id="skill-express">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
+                </div>
+                <div class="skill-icon-item" id="skill-postgresql">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" />
+                </div>
+                <div class="skill-icon-item" id="skill-swagger">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg" />
+                </div>
+                <div class="skill-icon-item" id="skill-openapi">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openapi/openapi-original.svg" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Computation/Automation Skills -->
+            <div class="skills-item computation">
+              <h3>Computation & Automation</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium fugit corrupti praesentium unde ad dolor, eveniet earum illo asperiores ut eos quasi, provident beatae dolores ipsum temporibus reprehenderit iste! Placeat!</p>
+              <div class="skill-icon-flex">
+                <div class="skill-icon-item"><img src="#" alt="" /></div>
+                <div class="skill-icon-item"><img src="#" alt="" /></div>
+                <div class="skill-icon-item"><img src="#" alt="" /></div>
+                <div class="skill-icon-item"><img src="#" alt="" /></div>
+                <div class="skill-icon-item"><img src="#" alt="" /></div>
+                <div class="skill-icon-item"><img src="#" alt="" /></div>
+                <div class="skill-icon-item"><img src="#" alt="" /></div>
+              </div>
+            </div>
+
+            <!-- Programming Skills -->
+            <div class="skills-item design">
+              <h3>Architecture & Design</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo animi totam, nulla quis odio quidem aliquam placeat, possimus voluptas atque molestiae, adipisci quae sapiente eligendi facere nostrum? Nostrum, cum ipsum.</p>
+              <div class="skill-icon-flex">
+                <div class="skill-icon-item"><img src="#" alt="" /></div>
+                <div class="skill-icon-item"><img src="#" alt="" /></div>
+                <div class="skill-icon-item"><img src="#" alt="" /></div>
+                <div class="skill-icon-item"><img src="#" alt="" /></div>
+                <div class="skill-icon-item"><img src="#" alt="" /></div>
+                <div class="skill-icon-item"><img src="#" alt="" /></div>
+                <div class="skill-icon-item"><img src="#" alt="" /></div>
+              </div>
+            </div>
+
           </div>
-
-          <!-- Computation/Automation Skills -->
-          <div class="skills-item computation">
-            <h3>Computation & Automation</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium fugit corrupti praesentium unde ad dolor, eveniet earum illo asperiores ut eos quasi, provident beatae dolores ipsum temporibus reprehenderit iste! Placeat!</p>
-          </div>
-
-          <!-- Programming Skills -->
-          <div class="skills-item design">
-            <h3>Architecture & Design</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo animi totam, nulla quis odio quidem aliquam placeat, possimus voluptas atque molestiae, adipisci quae sapiente eligendi facere nostrum? Nostrum, cum ipsum.</p>
-          </div>
-
         </div>
       </section>
 
