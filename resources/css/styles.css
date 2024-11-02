@@ -10,7 +10,13 @@ html section {
 html h2.title {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
+}
+
+.container.flex-header {
+  position: absolute;
+  height: 100%;
+  width: 40px;
 }
 
 .nav-placeholder{
@@ -65,9 +71,7 @@ html h2.title {
   color: white;
 }
 
-
 /* Projects Grid */
-
 
 .flex-container {
   /* width: 100%; */
@@ -84,16 +88,11 @@ html h2.title {
 }
 
 .flex-container::-webkit-scrollbar {
-  width: 0.2rem;
-}
- 
-.flex-container::-webkit-scrollbar-track {
-  /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+  height: 0.6rem;
 }
  
 .flex-container::-webkit-scrollbar-thumb {
   background-color: darkgrey;
-  outline: 1px solid slategrey;
 }
 
 .grid-item {
@@ -110,6 +109,32 @@ html h2.title {
   /* border: 1px solid black; */
   background-color: #1c1c1c;
 
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1500px) {
+  .grid-item {
+    min-width: calc(20vw - 20px);
+    /* max-height: calc(40vh - 20px); */
+  }
+}
+
+/* 6 */
+
+@media only screen and (max-width: 1500px) {
+  .grid-item {
+    min-height: calc(30vh - 20px);
+  }
+
+  html h2.title {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .grid-item {
+    min-height: calc(25vh - 20px);
+    /* max-height: calc(20vh - 20px); */
+  }
 }
 
 /* About Me */
@@ -133,13 +158,12 @@ html h2.title {
 }
 
 #my-photo {
-  min-width: 170px;
-  max-width: 250px;
-  aspect-ratio: 1;
-  border: 1px solid black;
+  max-height: 250px;
+  border-radius: 50%;
 }
+
 .about-flex p {
-  padding-left: 20px;
+  margin-left: 80px;
   min-width: 270px;
   max-width: 40vw;
 }
@@ -161,6 +185,33 @@ html h2.title {
   width: 100%;
   height: auto;
 }
+@media only screen and (max-width: 1500px) {
+  .about-credentials a {
+    max-width: 80px;
+  }
+
+  #my-photo {
+    max-height: 200px;
+  }
+
+  .about-flex p {
+    margin-left: 60px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .about-credentials a {
+    max-width: 60px;
+  }
+
+  #my-photo {
+    max-height: 150px;
+  }
+
+  .about-flex p {
+    margin-left: 40px;
+  }
+}
 
 /* Skills */
 
@@ -176,9 +227,11 @@ html h2.title {
 }
 
 .skills-item {
-  padding: 1.5rem;
+  padding: 1rem;
   border: 1px solid black;
   max-width: 500px;
+  /* background-color: #1c1c1c; */
+  /* color: white; */
   /* min-height: 80%; */
 }
 
@@ -187,19 +240,37 @@ html h2.title {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   /* max-height: 300px; */
 }
 
 .skill-icon-item {
-  min-width: 20px;
+  /* min-width: 20px; */
   max-width: 50px;
+  max-height: 50px;
+
   /* padding: 10px; */
-  /* border-radius: 15px; */
+  border-radius: 25%;
+  /* background-color: white; */
+  border: 5px solid white;
 }
 
 .skill-icon-item img {
   width: 100%;
   height: auto;
 
+}
+
+@media only screen and (max-width: 1500px) {
+  .skill-icon-item {
+    max-width: 40px;
+    max-width: 40px;
+
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .skill-icon-item {
+    max-width: 30px;
+  }
 }
