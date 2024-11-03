@@ -3,8 +3,16 @@
   font-size: 16px;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
 html section {
   margin-bottom: 40px;
+  scroll-snap-align: start;
 }
 
 html h2.title {
@@ -26,6 +34,10 @@ html h3 {
 html p {
   font-family: "Montserrat", sans-serif;
   line-height: 1.1;
+}
+
+main {
+
 }
 
 .sidebar {
@@ -82,11 +94,11 @@ main {
   display: grid;
   /* gap: 20px; */
   grid-template-columns: repeat(2, 1fr);
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .main-display-item {
-  height: 90vh;
+  height: 100vh;
   padding: 1.5rem;
   box-sizing: border-box;
   background-color: white;
@@ -106,71 +118,59 @@ main {
 
 /* Projects Grid */
 
-.flex-container {
-  /* width: 100%; */
-  align-items: flex-start;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  overflow-x: auto;
-  height: 100vh;
+.scroll-container {
+  overflow-x: scroll;
+}
+
+.grid-container {
+  padding-top: 20px;
+  height: 50vh;
+  display: grid;
+  grid-template: repeat(2, calc(25vh - 20px)) / repeat(4, calc(25vh - 20px));
+  grid-auto-columns: calc(25vh - 20px);
+  grid-auto-rows: calc(25vh - 20px);
   gap: 20px;
-  /* justify-content: space-between; */
+  grid-auto-flow: column;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
 
-.flex-container::-webkit-scrollbar {
-  height: 0.6rem;
+.scroll-container::-webkit-scrollbar {
+  height: 0.8rem;
 }
  
-.flex-container::-webkit-scrollbar-thumb {
+.scroll-container::-webkit-scrollbar-thumb {
   background-color: darkgrey;
 }
 
 .grid-item {
-  flex: 1 1 auto;
-  min-height: calc(40vh - 20px);
-  aspect-ratio: 1 / 1;
-  color: white;
+  /* flex: 1 1 auto; */
+  /* min-height: calc(40vh - 20px); */
+  /* aspect-ratio: 1 / 1; */
+  /* color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   font-size: 1.2em;
-  scroll-snap-align: start;
+  scroll-snap-align: start; */
   background-color: #1c1c1c;
 }
 
 .grid-item img {
-  width: calc(40vw);
-  height: auto;
-}
-
-@media only screen and (orientation: landscape) and (max-width: 1500px) {
-  .grid-item {
-    min-width: calc(20vw - 20px);
-  }
-}
-
-@media only screen and (max-width: 1500px) {
-  .grid-item {
-    min-height: calc(30vh - 20px);
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .grid-item {
-    min-height: calc(25vh - 20px);
-  }
+  /* width: calc(40vw); */
+  /* height: auto;
+  overflow: hidden; */
 }
 
 /* About Me */
 
 .about-skills {
   height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr 2fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* grid-template-rows: 1fr 2fr; */
 }
 
 #about {
@@ -321,7 +321,7 @@ main {
 /* Contact */
 
 #contact {
-  height: 100vh;
+  height: 50vh;
   background-color: #1c1c1c;
   color: white;
   margin-bottom: 0;
