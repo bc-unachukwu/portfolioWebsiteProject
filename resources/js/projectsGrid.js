@@ -1,15 +1,26 @@
 // Projects Container
-const projectElements = document.getElementsByClassName("grid-item");
+const projectElements = Array.from(document.getElementsByClassName("grid-item"));
 
-// Opacity on Mouse Over
-Array.from(projectElements).forEach(element => {
-    element.onmouseover = (event) => {
-        event.target.style.opacity = "0.6";
+const projectAnchors = Array.from(document.getElementsByClassName("grid-item-project"));
+
+// Titles
+const projectTitles = Array.from(document.getElementsByClassName("grid-item-title"));
+// const projectTitles = document.getElementsByClassName("grid-item-title");
+console.log(projectElements[0])
+console.log(projectTitles[0])
+
+
+projectElements.forEach((element, index) => {
+    element.onmouseover = () => {
+        projectAnchors[index].style.opacity = "0.5";
+        projectTitles[index].style.display = "block";
     };
-    element.onmouseleave = (event) => {
-        event.target.style.opacity = "";
-    }
-}); 
+    element.onmouseleave = () => {
+        projectAnchors[index].style.opacity = "";
+        projectTitles[index].style.display = "";
+    };
+});
+
 
 // const projectsDiv = document.getElementById("projects");
 
