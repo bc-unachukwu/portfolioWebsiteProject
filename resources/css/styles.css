@@ -126,7 +126,10 @@ main {
 /* Projects Grid */
 
 .scroll-container {
-  overflow-x: scroll;
+  overflow: auto;
+  cursor: grab;
+  width: 100%;
+  user-select: none;
   padding-left: 1px;
   padding-right: 1px;
 
@@ -143,6 +146,7 @@ main {
   grid-auto-flow: column;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  touch-action: auto;
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -156,7 +160,7 @@ main {
 .grid-item {
   position: relative;
   border: 10px solid white;
-  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(28, 28, 28, 0.6) 0px 0px 0px 1px;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -167,6 +171,7 @@ p.grid-item-title {
   position: relative;
   font-size: 2rem;
   font-weight: 600;
+  color: #1c1c1c;
   max-width: 80%;
   text-align: center;
   z-index: 10;
