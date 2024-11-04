@@ -16,7 +16,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   </head>
 
   <!-- Body -->
@@ -56,30 +56,25 @@
           <!-- Projects Grid -->
           <div class="scroll-container" id="drag">
             <div id="projects" class="grid-container"> <!-- class="flex-container" -->
-              <a href="#display-project" class="grid-item"><img src="#" alt="" /></a>
-              <a href="#display-project" class="grid-item"><img src="#" alt="" /></a>
-              <a href="#display-project" class="grid-item"><img src="#" alt="" /></a>
-              <a href="#display-project" class="grid-item"><img src="#" alt="" /></a>
-              <a href="#display-project" class="grid-item"><img src="#" alt="" /></a>
-              <a href="#display-project" class="grid-item"><img src="#" alt="" /></a>
-              <a href="#display-project" class="grid-item"><img src="#" alt="" /></a>
-              <a href="#display-project" class="grid-item"><img src="#" alt="" /></a>
-              <a href="#display-project" class="grid-item"><img src="#" alt="" /></a>
-              <a href="#display-project" class="grid-item"><img src="#" alt="" /></a>
-              <a href="#display-project" class="grid-item"><img src="#" alt="" /></a>
-              <a href="#display-project" class="grid-item"><img src="#" alt="" /></a>
-              <a href="#display-project" class="grid-item"><img src="#" alt="" /></a>
-              <a href="#display-project" class="grid-item"><img src="#" alt="" /></a>
-              <a href="#display-project" class="grid-item"><img src="#" alt="" /></a>
+              <a href="#display-project" class="grid-item" id="club-responsive"></a>
+              <a href="#display-project" class="grid-item" id="company-flex"></a>
+              <a href="#display-project" class="grid-item" id="coding-tips"></a>
+              <a href="#display-project" class="grid-item" id="python-todo"></a>
+              <a href="#display-project" class="grid-item" id="facial-emotion"></a>
+              <a href="#display-project" class="grid-item" id="cties"></a>
+              <a href="#display-project" class="grid-item" id="sde-dov"></a>
+              <a href="#display-project" class="grid-item" id="final-project"></a>
+              <a href="#display-project" class="grid-item" id="n2y"></a>              
+              <a href="#display-project" class="grid-item" id="dystopia-now"></a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- About -->
-      <section class="about-skills">
-        <div id="about">
-          <h2 class="title">About Me</h2>
+      <section id="about">
+        <h2 class="title">About Me</h2>
+        <div class="about-container">
           <div class="about-flex">
             <img id="my-photo" src="./resources/images/photo-me.png" alt="Lev Zhitnik">
             <div class="about-text">
@@ -94,14 +89,14 @@
               </div>
             </div>
           </div>
-          
         </div>
+      </section>
 
-        <!-- Skills -->
-        <div id="skills">
-          <h2 class="title">Professional Skills</h2>
+      <!-- Skills -->
+      <section id="skills">
+        <h2 class="title">Professional Skills</h2>
+        <div class="skills-container">
           <div class="skills-grid container">
-
             <!-- Programming Skills -->
             <div class="skills-item programming">
               <div class="skill-text">
@@ -222,6 +217,9 @@
 
     <!-- Load Scripts -->
     <script src="./resources/js/animations.js"></script>
+    <script src="./resources/js/projectsGrid.js"></script>
+    <script src="./resources/js/about.js"></script>
+
 
   </body>
 </html>
