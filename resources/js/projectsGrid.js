@@ -44,7 +44,7 @@ const projectTitles = Array.from(document.getElementsByClassName("grid-item-titl
 
 // console.log(projectElements[0])
 // console.log(projectTitles[0])
-
+const mainImage = document.getElementById("main-img")
 
 projectElements.forEach((element, index) => {
     element.onmouseover = () => {
@@ -56,10 +56,23 @@ projectElements.forEach((element, index) => {
         projectTitles[index].style.display = "";
     };
     element.onclick = () => {
-        console.log(projectTitles[index]);
+        const projectId = projectAnchors[index].getAttribute("id");
+        const styles = window.getComputedStyle(projectAnchors[index]);
+        mainImage.style.backgroundImage = styles["backgroundImage"];
+        if (projectId === "cties" || projectId === "final-project" || projectId === "sde-dov" || projectId === "n2y") {
+            mainImage.style.backgroundSize = "";
+            mainImage.style.backgroundPosition = "";
+        } else if (projectId === "dystopia-now") {
+            mainImage.style.backgroundSize = "";
+            mainImage.style.backgroundPosition = "20% center";
+        } else {
+            mainImage.style.backgroundSize = "contain";
+            mainImage.style.backgroundPosition = "";
+        };
     };
 });
 
+// Shuffle Projects Grid
 
 // const projectsDiv = document.getElementById("projects");
 
