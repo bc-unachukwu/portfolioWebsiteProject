@@ -11,5 +11,4 @@ Array.from(elements).forEach(element => {
     element.onmouseleave = (event) => {
         event.target.style.opacity = "";
     }
-}); 
-
+});

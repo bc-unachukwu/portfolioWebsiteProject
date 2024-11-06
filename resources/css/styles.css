@@ -59,10 +59,28 @@ html p {
   transform: scale(-1);
 }
 
+@keyframes menu {
+  to {
+    transform: scale(-1) translate(2px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes menu-reverse {
+  from {
+    transform: scale(-1) translate(2px);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(-1) translate(0);
+    opacity: 1;
+  }
+}
+
 #menu {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
   margin: 20px 0;
   align-items: center;
 }
@@ -92,14 +110,30 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   background-color: #1c1c1c;
-
 }
 
 .main-display-item {
   height: 100vh;
-  padding: 2rem;
+  padding: 5% 15%;
   box-sizing: border-box;
+  align-content: center;
 }
+
+#main-text h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+#main-text {
+  padding: 1rem;
+  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
 
 #main-img {
   background-image: url("../projects/final-project/img/final-project-florentine2049.png");
@@ -120,6 +154,24 @@ main {
   
   .main-display-item {
     height: 50vh;
+    padding: 3% 3%;
+    box-sizing: border-box;
+    align-content: center;
+  }
+  
+  #main-text h2 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+  }
+  
+  #main-text {
+    padding: 1rem;
+    border-bottom: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    font-size: 1rem;
+    line-height: 1.2;
   }
 
   #main-img {
@@ -243,7 +295,6 @@ p.grid-item-title {
 }
 
 .about-credentials {
-  /* opacity: 0.6; */
   margin-top: 20px;
   display: flex;
   justify-content: space-evenly;
@@ -322,7 +373,6 @@ p.grid-item-title {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  /* max-height: 300px; */
 }
 
 .skill-icon-item {
@@ -424,7 +474,6 @@ body footer {
     height: 100vh;
   }
 }
-
 
 @media only screen and (max-width: 1100px) and (orientation: portrait) {
   .skills-grid {

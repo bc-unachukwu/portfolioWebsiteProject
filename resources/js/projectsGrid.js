@@ -32,7 +32,6 @@ scrollContainer.addEventListener("mousemove", (e) => {
     scrollContainer.scrollLeft = scrollLeft - walk;
 });
 
-
 // Projects Container
 const projectElements = Array.from(document.getElementsByClassName("grid-item"));
 
@@ -42,10 +41,13 @@ const projectAnchors = Array.from(document.getElementsByClassName("grid-item-pro
 // Titles
 const projectTitles = Array.from(document.getElementsByClassName("grid-item-title"));
 
-// console.log(projectElements[0])
-// console.log(projectTitles[0])
 const mainImage = document.getElementById("main-img")
+const mainContent = document.getElementById("main-content")
+const mainText = document.getElementById("main-text")
+const nodes = mainText.childNodes;
 
+
+// Apply Styles
 projectElements.forEach((element, index) => {
     element.onmouseover = () => {
         projectAnchors[index].style.opacity = "0.4";
@@ -69,8 +71,57 @@ projectElements.forEach((element, index) => {
             mainImage.style.backgroundSize = "contain";
             mainImage.style.backgroundPosition = "";
         };
+
+        const projectIdData = projectData[projectId];
+        mainImage.style.backgroundColor = projectIdData["color-1"];
+        mainContent.style.backgroundColor = projectIdData["color-1"];
+        mainText.style.borderBottom = "1px solid " + projectIdData["color-3"];
+        mainText.style.borderTop = "1px solid " + projectIdData["color-3"];
+
+        nodes.forEach(node => {
+            console.log(node);
+            if (node.nodeName === "H2") {
+                node.style.color = projectIdData["color-2"];
+                node.textContent = projectIdData["title"]
+            };
+            if (node.nodeName === "P") {
+                node.style.color = projectIdData["color-3"];
+                node.innerHTML = projectIdData["text"]
+            };
+        });
+        
+
     };
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Shuffle Projects Grid
 
