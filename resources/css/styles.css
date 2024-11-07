@@ -308,6 +308,7 @@ p.grid-item-title {
   min-height: 40vh;
   max-height: 70vh;
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   justify-content: space-between;
 }
