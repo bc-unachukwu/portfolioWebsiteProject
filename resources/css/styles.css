@@ -214,7 +214,7 @@ main {
 
 p.grid-item-title {
   position: relative;
-  font-size: 2rem;
+  font-size: clamp(1rem, 2vw, 2rem);
   font-weight: 600;
   color: #1c1c1c;
   max-width: 80%;
