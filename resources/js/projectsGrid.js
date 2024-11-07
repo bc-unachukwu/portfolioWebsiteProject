@@ -1,5 +1,5 @@
 // Scrollable Container
-const scrollContainer = document.getElementById("drag");
+const scrollContainer = document.getElementById("projects");
 
 let isDown = false;
 let startX;
@@ -32,10 +32,10 @@ scrollContainer.addEventListener("mousemove", (e) => {
     scrollContainer.scrollLeft = scrollLeft - walk;
 });
 
-// Projects Container
+// Projects container
 const projectElements = Array.from(document.getElementsByClassName("grid-item"));
 
-// Projects Anchors
+// Projects anchors
 const projectAnchors = Array.from(document.getElementsByClassName("grid-item-project"));
 
 // Titles
@@ -45,9 +45,10 @@ const mainImage = document.getElementById("main-img")
 const mainContent = document.getElementById("main-content")
 const mainText = document.getElementById("main-text")
 const nodes = mainText.childNodes;
+// console.log(nodes)
 
 
-// Apply Styles
+// Apply styles
 projectElements.forEach((element, index) => {
     element.onmouseover = () => {
         projectAnchors[index].style.opacity = "0.4";
@@ -75,22 +76,28 @@ projectElements.forEach((element, index) => {
         const projectIdData = projectData[projectId];
         mainImage.style.backgroundColor = projectIdData["color-1"];
         mainContent.style.backgroundColor = projectIdData["color-1"];
-        mainText.style.borderBottom = "1px solid " + projectIdData["color-3"];
-        mainText.style.borderTop = "1px solid " + projectIdData["color-3"];
+        mainText.style.borderBottom = `1px solid ${projectIdData["color-3"]}`;
+        mainText.style.borderTop = `1px solid ${projectIdData["color-3"]}`;
 
+        // Styling per node
         nodes.forEach(node => {
-            console.log(node);
             if (node.nodeName === "H2") {
                 node.style.color = projectIdData["color-2"];
-                node.textContent = projectIdData["title"]
+                node.textContent = projectIdData["title"];
             };
-            if (node.nodeName === "P") {
+            if (node.nodeName === "DIV") {
                 node.style.color = projectIdData["color-3"];
-                node.innerHTML = projectIdData["text"]
+                node.innerHTML = projectIdData["text"];
+                // Change the styling of anchors inside the <p>
+                Array.from(node.children[0].children).forEach(grandchild => {
+                    if (grandchild.nodeName === "A") {
+                        console.log(grandchild);
+                        grandchild.style.color = projectIdData["color-3"];
+                        grandchild.style.textDecoration = `underline ${projectIdData["color-2"]}`;
+                    };
+                });
             };
         });
-        
-
     };
 });
 
