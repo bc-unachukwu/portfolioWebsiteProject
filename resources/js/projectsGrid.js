@@ -42,7 +42,7 @@ const projectAnchors = Array.from(document.getElementsByClassName("grid-item-pro
 const projectTitles = Array.from(document.getElementsByClassName("grid-item-title"));
 
 const mainImage = document.getElementById("main-img")
-const mainContent = document.getElementById("main-content")
+const mainDisplay = document.getElementsByClassName("main-display")[0]
 const mainText = document.getElementById("main-text")
 const nodes = mainText.childNodes;
 // console.log(nodes)
@@ -74,8 +74,7 @@ projectElements.forEach((element, index) => {
         };
 
         const projectIdData = projectData[projectId];
-        mainImage.style.backgroundColor = projectIdData["color-1"];
-        mainContent.style.backgroundColor = projectIdData["color-1"];
+        mainDisplay.style.backgroundColor = projectIdData["color-1"];
         mainText.style.borderBottom = `1px solid ${projectIdData["color-3"]}`;
         mainText.style.borderTop = `1px solid ${projectIdData["color-3"]}`;
 
@@ -90,8 +89,10 @@ projectElements.forEach((element, index) => {
                 node.innerHTML = projectIdData["text"];
                 // Change the styling of anchors inside the <p>
                 Array.from(node.children[0].children).forEach(grandchild => {
+                    console.log(grandchild)
                     if (grandchild.nodeName === "A") {
                         console.log(grandchild);
+                        console.log("what");
                         grandchild.style.color = projectIdData["color-3"];
                         grandchild.style.textDecoration = `underline ${projectIdData["color-2"]}`;
                     };
