@@ -290,6 +290,7 @@ p.grid-item-title {
 .skills-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: auto 0;
 }
 
@@ -308,9 +309,12 @@ p.grid-item-title {
   min-height: 40vh;
   max-height: 70vh;
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.skill-text p {
+  line-height: 1.1;
 }
 
 .skill-icon-flex {

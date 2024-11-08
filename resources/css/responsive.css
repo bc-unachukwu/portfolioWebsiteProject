@@ -161,7 +161,34 @@
   }
 }
 
-@media only screen and (orientation: portrait) ,(orientation: landscape) and (max-height: 500px) {
+@media only screen and (orientation: portrait) {
+  /* Skills */
+
+  .skills-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skills-container {
+    min-height: 90vh;
+    overflow: auto;
+  }
+
+  .skills-item {
+    padding: 10px;
+    max-width: 85vw;
+    gap: 20px;
+    min-height: 22vh;
+  }
+
+  .skill-icon-item {
+    min-width: 20px;
+    max-width: 50px;
+    height: auto;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 600px) {
   /* Skills */
 
   .skills-grid {
@@ -173,11 +200,14 @@
   }
 
   .skills-item {
-    padding: 2vw;
-    max-width: 90vw;
+    padding: 10px;
+    width: 85vw;
     gap: 20px;
-    min-height: 0;
-    max-height: 30vh;
+    min-height: 40vh;
+  }
+  
+  .skills-item .skill-text {
+    max-width: 75vw;
   }
 
   .skill-icon-flex {
@@ -275,7 +305,7 @@
   }
 
   .skill-icon-item {
-    max-width: 30px;
+    max-width: 35px;
     height: auto;
   }
 
@@ -286,7 +316,7 @@
 
 @media only screen and (min-aspect-ratio: 2/1), (orientation: lanscape) and (max-width: 800) {
   .skills-grid {
-    gap: 3vw;
+    gap: 2vw;
   }
 
   .skills-item {
@@ -322,10 +352,10 @@
     margin-top: 3vh;
   }
 
-  .about-credentials a img {
+  /* .about-credentials a img {
     max-width: 10vh;
     height: auto;
-  }
+  } */
 }
 
 @media only screen and (orientation: portrait) and (max-width: 450px) {
@@ -466,10 +496,8 @@
 
   .skills-item {
     padding: 2vw 0;
-    gap: 0px;
+    gap: 5px;
     justify-content: space-between;
-    min-height: 20vh;
-    max-height: 50vh;
   }
 
   .skill-icon-flex {
